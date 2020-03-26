@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simplyclub</title>
+	<link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<style type="text/css">
+		.container{
+  background-color:#f1f1f1;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+.header {
+  overflow: hidden:#808080;
+  padding: 20px 10px;
+}
+.navbar {
+  background-color:#808080;
+  overflow: hidden;
+}
+.navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+}
+.navbar a.hover {
+  background-color: black;
+  color: white;
+}
+/*.navbar a.active {
+  background-color:#00bfff;/*//*/sky blue/*//*/
+  color: white;
+}*/
+.card{
+  border: 2px solid grey;
+  background-color: white;
+  height: 175px;
+  width: 175px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 2px 4px 8px #ccc;
+  float: left;
+}
+.container1{
+  display: flex;
+  justify-content: all;
+  font-size: 24px;
+}
+.place_header{
+  text-align: justify;
+  margin-right: 10px;
+}
+.btn_btn-primary {
+  background-color: #00bfff;
+  border: 2px solid black;
+  color: black;
+  padding: 5px 5px;
+  text-align: top;
+  text-decoration: none;
+  display: inline-block;
+  margin: 25px 25px 25px 25px;
+  cursor: pointer;
+  border-radius: 30px;
+  position:relative;
+  padding-top: 10px;
+}
+.btn_btn-primary:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.container2{
+  display: flex;
+  justify-content: all;
+  font-size: 24px;
+}
+.place_header1{
+  text-align: justify;
+  margin-right: 10px;
+}
+.button {
+  background-color: #00bfff;
+  border: 2px solid black;
+  color: black;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 25px 25px 25px 25px;
+  cursor: pointer;
+  border-radius: 30px;
+  position: relative;
+  top: 100px;
+  bottom: -43px;
+}
+.button:hover {
+  background-color: #4CAF50;
+  color: white;
+ } 
+.card1{
+  background-color: white;
+  height: 175px;
+  width: 175px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 2px 4px 8px #ccc;
+}
+.main_container{
+margin-top: -48%;
+}
+.button {
+  background-color: #00bfff;
+  border: 2px solid black;
+  color: black;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 25px 25px 25px 25px;
+  cursor: pointer;
+  border-radius: 30px;
+  position: relative;
+  top: 100px;
+  bottom: -43px;
+}
+.button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.container3{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 24px;
+}
+.place_header2{
+  text-align: justify;
+  margin-right: 10px;
+  float: left;
+}.button {
+  background-color: #00bfff;
+  border: 2px solid black;
+  color: black;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 25px 25px 25px 25px;
+  cursor: pointer;
+  border-radius: 30px;
+  position: relative;
+  top: 100px;
+  bottom: -43px;
+}
+.button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+/*image-style{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  padding: 20px 20px;
+}*/
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container" ml-auto>
+			<div class="navbar-brand" >SIMPLYCLUB</div>
+		<!-- 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button> -->
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item ">
+       <a href="/logout/" class="btn btn-primary">logout</a>
+						<!-- <a href="/signin/" class="btn btn-danger" style="margin-right: 10px">SIGNIN</a>
+						<a href="/signup" class="btn btn-danger">SIGNUP</a> -->
+						<!-- <a href="/signup/" class="btn btn-danger">SIGNUP</a> -->
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<br>
+	{% block body %}
+	{% endblock %}
+</body>
+</html>

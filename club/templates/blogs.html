@@ -1,0 +1,59 @@
+{% extends 'base1.html' %}
+{% block body %}
+
+<!-- <div class="container">
+	<div class="text-card">
+		<div class="card-header">
+			<div class="img-div">
+				<img src="https://images.unsplash.com/photo-1560541919-eb5c2da6a5a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60">
+			</div>
+			<div class="sdiv">
+				<div class="p-div">
+					<h2>Top 10 Summer Camp Activities in Bangalore</h2>
+					<i class="material-icons">event_available</i>
+				</div>
+
+			</div>
+			<div class="card-body">
+				<p>There are a trillion activities to enjoy the summer heat with EventsHigh. If kids and adults want to have the best time during their summer vacations then browse here enroll in events that are of your choice and category. Here you can find all categories hosted across Bangalore. The kind of events included under summer activities are summer adventure, camping, trekking, art classes, dance ... <a href="#" style="color: red">View more</a></p>
+			</div>
+		</div>
+	</div>
+</div> -->
+<div class="heading" style="display: flex;justify-content: center;">
+	<h4><b>BLOGS</b></h4></div>
+	<div class="container">
+		{% for i in item %}
+		{% if i.card_type == 'blogs' %}
+		<form action="/blogs/{{i.id}}/" method="POST">
+			{% csrf_token %}
+			<a href="/blog_articles/" style="color: black">
+				<!-- <a href="blog_articles-1" style="color: black"> -->
+					<div class="card" style="width: 100%;margin: 10px;height: 15rem;position:relative;left:-10px">
+						<img src="{{i.image_url}}" class="card-img-top" alt="..." style="height: 14.7rem;width: 25%"></a>
+					<div class="container" style="background:white ;width:75%;right: 0;height:15rem;position: absolute;top:0px">
+						
+					
+						<div class="card-body">
+							<a href="/blog_articles/" style="color: black">
+		
+							<h4 class="card-title"><b>{{i.title}}</b></h4></a>
+							<p class="subtitles">
+							<span class=" material-icons" style="color: blue">event_available</span><label class="labels" style="margin-right: 50px;vertical-align:bottom;"><b>26 March 2020</b></label>
+							<span class="material-icons" style="color: blue">person</span><label class="labels1" style="vertical-align: bottom;"><b>SimplyClub Editor</b></label>
+							</p>
+							<p class="card-text">{{i.description}}<a href="#" style="color: red">View more</a></p>
+						</div>
+					</div>
+				</div>
+		</form>
+		{% endif %}
+		{% endfor %}
+		{% endblock %}
+	</div>
+
+	
+
+			
+	
+

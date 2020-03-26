@@ -1,0 +1,22 @@
+{% extends 'base1.html' %}
+{% block body %}
+<div class="heading" style="display: flex;justify-content: center;">
+	<h4><b>EVENTS</b></h4></div>
+	<div class="container">
+		{% for i in item %}
+		{% if i.card_type == 'events' %}
+		<form action="/events/{{i.id}}/" method="POST">
+			{% csrf_token %}
+			<div class="card" style="width: 15rem;margin: 10px;height: 15rem">
+				<img src="{{i.image_url}}" class="card-img-top" alt="..." style="height: 14.7rem">
+				<div class="card-body">
+					<h4 class="card-title"><b>{{i.title}}</b></h4>
+					<p class="card-text"><b>{{i.description}}</b></p>
+					<button class="btn btn-danger" type="submit">Book the event</button>
+				</div>
+			</div>
+		</form>
+		{% endif %}
+		{% endfor %}
+	{% endblock %}
+</div>

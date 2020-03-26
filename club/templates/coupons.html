@@ -1,0 +1,22 @@
+{% extends 'base1.html' %}
+{% block body %}
+<div class="heading" style="display: flex;justify-content: center;">
+	<h4><b>COUPONS</b></h4></div>
+	<div class="container">
+		{% for i in item %}
+		{% if i.card_type == 'coupons' %}
+		<form action="/coupons/{{i.id}}/" method="POST">
+			{% csrf_token %}
+			<div class="card" style="width: 15rem;margin: 10px;height: 15rem">
+				<img src="{{i.image_url}}" class="card-img-top" alt="..." style="height: 14.7rem">
+				<div class="card-body">
+					<h4 class="card-title"><b>{{i.title}}</b></h4>
+					<p class="card-text"><b>{{i.description|truncatechars:75}}</b></p>
+					<button class="btn btn-danger" type="submit">Enjoy the coupons</button>
+				</div>
+			</div>
+		</form>
+		{% endif %}
+		{% endfor %}
+	{% endblock %}
+</div>
